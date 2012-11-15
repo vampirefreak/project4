@@ -93,4 +93,57 @@ lessThanToGreat = list[ i ];
 };
 return lessThanToGreat; // make up number variable assignment project 2
 }
+
+
+return {
+
+"changeSeperator": changeSeperator,
+"cellPhoneNo": cellPhoneNo,
+"gothEmail" : gothEmail,
+"vampWeb" : vampWeb,
+"caseTitle": caseTitle,
+"listedKey": listedKey,
+"formatDecimal": formatDecimal,
+"matchThatFuzz": matchThatFuzz,
+"anArray": anArray,
+"christmasToBirthday": christmasToBirthday,
+"smallToLarge": smallToLarge
+
+};
+},
+
+lib = new Library(),
+change = {
+"string": "Happy Thanksgiving Mr.Lewis",
+"seperator": ", ",
+"joiner": " "
+
+};
+
+cellularPhone = { "string": "920-539-2914" },
+theGothEmail = {"string" : "gothichuskykatrina@hotmail.com"},
+vampFreak = { "string": "http://www.vampirefreaks.com" },
+caseSens = { "string": "marilyn manson is hot and my hero!!!" },
+keyedList = { "list": [ { "T": 30 }, { "T": 35 }, { "T": 100} ], "key": "T" },
+deciForm = { "string": "4151983.81403", "precision": 15 },
+fuzzyPerc = { "foundation": 29, "test": 35.5, "range": 1.99 },
+arrayList = { "list": [ 20, "1", 40,60, "f", 80,90,100, "thirty", 30, 45, 105 ] },
+mmsmhd = { "list": [ new Date( 1912, 04,15 ), new Date(2014,04,15)] };
+tinyToHuge = { "list": [ 1, 5, 9, 13, 17, 21, 25, 29 ]},
+
+console.log( change.string + ": " + lib.changeSeperator( change.string, change.seperator, change.joiner ));
+console.log( cellularPhone.string + ": " + lib.cellPhoneNo( cellularPhone.string ));
+console.log( theGothEmail.string + ": " + lib.gothEmail( theGothEmail.string ));
+console.log( vampFreak.string + ": " + lib.vampWeb( vampFreak.string ));
+console.log( caseSens.string + ": " + lib.caseTitle( caseSens.string ));
+console.log( lib.listedKey( keyedList.list, keyedList.key ));
+console.log( deciForm.string + ", " + deciForm.precision + ": " + lib.formatDecimal( deciForm.string, deciForm.precision ));
+console.log( "foundation=" + fuzzyPerc.foundation + ", test=" + fuzzyPerc.test + ", range=" + fuzzyPerc.range + ": " +
+lib.matchThatFuzz( fuzzyPerc.foundation, fuzzyPerc.test, fuzzyPerc.range ) + " " + fuzzyPerc.foundation + " within " + ((fuzzyPerc.range + "" ).substring(( fuzzyPerc.range + "" ).indexOf( "." ) + 1 ) + "%." ));
+console.log( lib.anArray( arrayList.list ));
+console.log( "There are " + lib.christmasToBirthday( mmsmhd.list[ 0 ], mmsmhd.list[ 1 ], false).join( " hours, or: " ) + " days total. between " +
+mmsmhd.list[ 0 ] + " and " + mmsmhd.list[ 1 ]);
+console.log( tinyToHuge.list + ", target=" + tinyToHuge.target + ": " + lib.smallToLarge( tinyToHuge.list, tinyToHuge.target ));
+
+
  
