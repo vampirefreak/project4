@@ -49,4 +49,22 @@ var Library = function() {
     return parseFloat( string ).toFixed( precision );
   }, // boolean output assignment project 1
   
+  matchThatFuzz = function( foundation, test, percentage ) {
+var high = foundation + ( foundation * percentage ), 
+low = foundation - ( foundation * percentage ); 
+if( test > foundation && high > test ) {
+return "above"; 
+}
+else if( test < foundation && low < test ) {
+return "below"; 
+};
+return "out of range"; 
+}, // encapsulation assignment project 3
+
+anArray = function( list ) {
+var sum = 0; 
+for( var i = 0; i < list.length; i++ ) { 
+if( typeof( list[ i ]) === typeof( sum )) { 
+sum += list[ i ]; 
+};
  
