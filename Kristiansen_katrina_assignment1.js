@@ -67,4 +67,30 @@ for( var i = 0; i < list.length; i++ ) {
 if( typeof( list[ i ]) === typeof( sum )) { 
 sum += list[ i ]; 
 };
+
+};
+return sum;
+}, // make up boolean logic assignment project 2
+
+christmasToBirthday = function( dom, dom1 ) {
+var miliSeconds, seconds, mins, hours, days;
+dom = dom.getTime(); 
+dom1 = dom1.getTime();
+miliSeconds = dom - dom1;
+seconds = miliSeconds / 1000; 
+mins = seconds / 60; 
+days = hours / 24; 
+
+return [ Math.floor( hours ), Math.floor( days )];
+}, // make up string variable assignment project 2
+
+smallToLarge = function( list, num ) {
+var lessThanToGreat;
+for( var i = 0; i < list.length; i++ ){
+if( list[ i ] > num && (list[ i ] < lessThanToGreat || lessThanToGreat === undefined )) { 
+lessThanToGreat = list[ i ];
+};
+};
+return lessThanToGreat; // make up number variable assignment project 2
+}
  
